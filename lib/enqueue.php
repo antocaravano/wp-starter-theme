@@ -5,16 +5,19 @@
 					CSS
 *********************************************************/
 function add_css_styles() {
-	// aggiunge stile principale
+	
+	// add bootstrap
     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
 	
-	// lightslider
-	wp_register_style('lightslider-css', get_template_directory_uri() . '/assets/css/lightslider.css', array(), '1.0', 'all');
+	// add lightslider
+	wp_register_style('lightslider-css', get_template_directory_uri() .'/assets/css/lightslider.css', array(), '1.0', 'all');
     wp_enqueue_style('lightslider-css');
 	
-	
+	// add main style
     wp_enqueue_style( 'app-css', get_template_directory_uri().'/assets/css/app.css');
-    wp_register_style('googleFont', 'http://fonts.googleapis.com/css?family=Lato:300,400|Merryweather+Sans:300,400,700,800');
+    
+    // add google fonts
+    wp_register_style('googleFont', 'http://fonts.googleapis.com/css?family='.GOOGLE_FONT1.':'.GOOGLE_FONT1_WEIGHT.'|'.GOOGLE_FONT2.':'.GOOGLE_FONT2_WEIGHT.'');
     wp_enqueue_style('googleFont');
 
 }

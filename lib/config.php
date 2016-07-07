@@ -1,6 +1,6 @@
 <?php 
 /*********************************************************
-					 CONFIG
+CONFIG
 *********************************************************/
 $my_site_name = 'Wp Starter Theme';
 $my_site_slug = 'wpstartertheme';
@@ -12,6 +12,13 @@ if (!defined('SITE_PREFIX')) {
 
 define("GOOGLE_MAPS_API_KEY", "");
 define("CONTATTI_PAGE_ID", 16);
+
+define("GOOGLE_FONT1", "Lato");
+define("GOOGLE_FONT1_WEIGHT", "300,400");
+
+define("GOOGLE_FONT2", "Roboto");
+define("GOOGLE_FONT2_WEIGHT", "300,400");
+
 
 
 /*------------------------------------------------------------------------*\
