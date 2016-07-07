@@ -7,8 +7,9 @@ module.exports = function(grunt) {
 			options: {              // Target options
 				sassDir: 'sass',
 				cssDir: 'assets/css',
-				imagesDir: 'img',
-				fontsDir: 'fonts',
+				imagesDir: 'assets/img',
+				javascriptsDir: 'assets/js',
+				fontsDir: 'assets/fonts',
 				environment: 'production',
 				outputStyle: 'compressed',
 				force: true
@@ -18,36 +19,82 @@ module.exports = function(grunt) {
 			options: {
 				sassDir: 'sass',
 				cssDir: 'assets/css',
-				imagesDir: 'img',
-				fontsDir: 'fonts',
+				imagesDir: 'assets/img',
+				javascriptsDir: 'assets/js',
+				fontsDir: 'assets/fonts',
 				environment: 'development',
-				outputStyle: 'expanded',
-				sourcemap: false,
+				outputStyle: 'nested'
 			}
 		}
 	},
+    uglify: {
+      dist: {
+      	options: {
+	      	beautify: false,
+	      	preserveComments: false,
+      	},
+	     files: {
+          'assets/js/vendor.min.js': [
+            'lib/js/vendor/*.js'
+          ],
+          'assets/js/custom.min.js': [
+          	'lib/js/custom/custom.js',
+          	'!assets/js/custom/googlemap.js'
+          ]
+        }
+      },
+      dev: {
+      	options: {
+	      	beautify: false,
+	      	preserveComments: false,
+      	},
+	     files: {
+          'assets/js/vendor.min.js': [
+            'lib/js/vendor/*.js'
+          ],
+          'assets/js/custom.min.js': [
+          	'lib/js/custom/custom.js',
+          	'!assets/js/custom/googlemap.js'
+          ]
+        }
+      }
+    },
     watch: {
+	  
       compass: {
 		  files: ['sass/**/*.{scss,sass}'],
 		  tasks: ['compass:dev']
 	  },
+      js: {
+        files: [
+          'lib/js/custom/*.js',
+          'lib/js/vendor/*.js',
+        ],
+        tasks: [ 'uglify:dev']
+      }
     },
-    
+
+
   });
 
   // Load tasks
   
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Register tasks
   grunt.registerTask('default', [
     'compass:dist',
+    'uglify:dist',
   ]);
 
   grunt.registerTask('dev', [
 	'compass:dev',
+	'uglify:dev',
     'watch'
+    
+       
   ]);
 
 };
