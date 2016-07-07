@@ -1,0 +1,149 @@
+/*
+Theme Name: Theme
+Theme URI: 
+Author: Antonello Caravano
+Author URI: http://www.antonellocaravano.it
+Description: Wp Starter Theme
+Version: 07/2016
+*/
+
+@import "_config";
+@import "bootstrap/variables";
+
+/*
+* TAGS
+*/
+
+body {
+	-webkit-font-smoothing:antialiased;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+p {
+	
+	@media screen and (min-width: $screen-lg) {
+
+	}
+	
+}
+
+h1,h2,h3,h4,h5 {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+
+/*
+* LAYOUT
+*/
+
+/*
+* NAVS
+*/
+
+
+
+/*
+* HELPERS
+*/
+.uppercase {
+	text-transform: uppercase !important;
+}
+
+.bold {
+	font-weight: bold !important;
+}
+
+.cover {
+	background-position: center center;
+	background-size: cover;
+}
+
+
+
+
+
+/*
+* BREADCRUMB
+*/
+
+.breadcrumb {
+	a {
+		
+	}
+}
+
+
+/*
+* BTN
+*/
+
+.btn {
+
+}
+
+.btn-default {
+
+    &:hover, &:focus {
+	    
+	    
+    }
+
+}
+
+
+
+/*
+* FORM
+*/
+
+.form-control {
+
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	
+	&:focus {
+		outline: 0;
+		box-shadow: none;
+		-webkit-transition: all .3s ease;
+		-moz-transition: all .3s ease;
+		-o-transition: all .3s ease;
+		transition: all .3s ease;
+	}
+	
+	&:active {
+		outline: 0;
+		box-shadow: none;
+	}
+}
+
+
+.form-control::-webkit-input-placeholder { color: #000; }
+.form-control:-moz-placeholder { color: #000; }
+.form-control::-moz-placeholder { color: #000; }
+.form-control:-ms-input-placeholder { color: #000; }
+
+
+/*
+* FOOTER
+*/
+
+footer {
+
+	
+	
+}
+
+
+
+
+

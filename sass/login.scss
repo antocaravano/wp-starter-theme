@@ -1,0 +1,80 @@
+// core variables
+
+@import "_config";
+
+body {
+	background-color: $color1;
+	font-size: 16px;
+}
+
+#login {
+    width: 320px;
+    padding: 4% 0 0;
+}
+
+.wp-core-ui .button-primary {
+    background: $color1 !important;
+    border-color: $color0;
+    -webkit-box-shadow: 0 1px 0 #006799;
+    box-shadow: 0 1px 0 #006799;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    text-transform: uppercase;
+    
+    &:hover {
+	    outline:0;
+	    background: $color0 !important;
+    border-color: $color0;
+	    
+    }
+    
+    &:focus {
+	    
+	    background: $color0 !important;
+    border-color: $color0;
+	    outline:0;
+    }
+}
+
+.login form {
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 26px 24px 46px;
+    background: $color0;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+}
+
+.login label {
+    color: $color1;
+    font-size: 16px;
+}
+
+.login #login_error, .login .message {
+    border-left: 4px solid $color0;
+    padding: 12px;
+    margin-left: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+.login #backtoblog a, .login #nav a {
+    text-decoration: none;
+    color: $color0;
+    
+    &:hover {
+	    color: #fff;
+    }
+}
+
+input[type=checkbox]:checked:before {
+
+    color: $color0;
+}
