@@ -1,0 +1,24 @@
+{
+  "name": "WP-Starter-Theme",
+  "version": "0.0.1",
+  "author": "Antonello Caravano",
+  "homepage": "http://www.antonellocaravano.it",
+  "license": "MIT",
+  "description": "Tema for WordPress + Sass + Bootstrap",
+  "contributors": [
+    {
+      "name": "Antonello Caravano",
+      "email": "lellocaravano@gmail.com"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-compass": "^1.0.4",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-uglify": "^0.10.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-wp-assets": "^0.2.6"
+  }
+}
