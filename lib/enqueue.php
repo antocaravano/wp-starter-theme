@@ -8,11 +8,7 @@ function add_css_styles() {
 	
 	// add bootstrap
     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
-	
-	// add lightslider
-	wp_register_style('lightslider-css', get_template_directory_uri() .'/assets/css/lightslider.css', array(), '1.0', 'all');
-    wp_enqueue_style('lightslider-css');
-	
+
 	// add main style
     wp_enqueue_style( 'app-css', get_template_directory_uri().'/assets/css/app.css');
     
@@ -48,12 +44,10 @@ add_action( 'login_enqueue_scripts', 'enqueue_login_style' );
 
 function add_js_scripts() {
 	
-	
-	wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/modernizr.js', array(), '3.3.1'); 
-	wp_enqueue_script('modernizr');
 
-	wp_register_script( 'bs-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '1.0', false );
-	wp_enqueue_script( 'bs-js' );
+
+	wp_register_script( 'vendor-js', get_template_directory_uri() . '/assets/js/vendor.min.js', array('jquery'), '1.0', false );
+	wp_enqueue_script( 'vendor-js' );
 	
 	
 	if(is_page_template('tpl-contatti.php')) {
@@ -66,7 +60,7 @@ function add_js_scripts() {
 		));	
 	}
 	
-	wp_register_script( 'app-js', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), '1.0', true );
+	wp_register_script( 'app-js', get_template_directory_uri() . '/assets/js/app.min.js', array('jquery'), '1.0', true );
 	wp_enqueue_script( 'app-js' );
 }
 

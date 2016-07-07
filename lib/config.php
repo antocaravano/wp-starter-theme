@@ -9,7 +9,7 @@ $my_site_version = '07/2016';
 
 if (!defined('SITE_PREFIX')) {
 	define("SITE_PREFIX", "wpstartertheme");
-
+}
 define("GOOGLE_MAPS_API_KEY", "");
 define("CONTATTI_PAGE_ID", 16);
 

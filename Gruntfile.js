@@ -37,23 +37,24 @@ module.exports = function(grunt) {
           'assets/js/vendor.min.js': [
             'lib/js/vendor/*.js'
           ],
-          'assets/js/custom.min.js': [
-          	'lib/js/custom/custom.js',
+          'assets/js/app.min.js': [
+          	'lib/js/app.js',
           	'!assets/js/custom/googlemap.js'
           ]
         }
       },
       dev: {
       	options: {
-	      	beautify: false,
-	      	preserveComments: false,
+	      	beautify: true,
+	      	preserveComments: true,
       	},
 	     files: {
           'assets/js/vendor.min.js': [
+	         'lib/js/vendor/**/*.js',
             'lib/js/vendor/*.js'
           ],
-          'assets/js/custom.min.js': [
-          	'lib/js/custom/custom.js',
+          'assets/js/app.min.js': [
+          	'lib/js/app.js',
           	'!assets/js/custom/googlemap.js'
           ]
         }
@@ -67,8 +68,9 @@ module.exports = function(grunt) {
 	  },
       js: {
         files: [
-          'lib/js/custom/*.js',
-          'lib/js/vendor/*.js',
+          'lib/js/*.js',
+          'lib/js/vendor/**/*.js',
+          'lib/js/vendor/*.js'
         ],
         tasks: [ 'uglify:dev']
       }
@@ -94,7 +96,6 @@ module.exports = function(grunt) {
 	'uglify:dev',
     'watch'
     
-       
   ]);
 
 };
